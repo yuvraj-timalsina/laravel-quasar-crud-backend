@@ -24,8 +24,8 @@ class UpdateTodoRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required|unique:todos,'.$this->todo->id,
-            'description'=>'required,'.$this->todo->id
+            'title'=>'required|unique:todos,title,'.$this->todo->id,
+            'description'=>'required'
         ];
     }
 }
